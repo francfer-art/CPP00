@@ -28,6 +28,7 @@
 
 # Temporary files
 .DB_Store
+.vscode
 
 # Executables
 *.exe

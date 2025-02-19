@@ -2,12 +2,8 @@
 #include <cctype> // Allows me to use functions like isalfa or toupper
 
 void  print_elem(char *c) {
-  while (*c != '\0') {
-    if (std::isalpha(*c)) {
-      std::cout << (char)std::toupper(*c);
-    } else {
-      std::cout << *c;
-    }
+  while (*c) {
+    std::cout << (char)std::toupper(*c);
     c++;
   }
 }
