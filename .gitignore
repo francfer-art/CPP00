@@ -26,6 +26,9 @@
 *.a
 *.lib
 
+# Temporary files
+.DB_Store
+
 # Executables
 *.exe
 *.out
