@@ -1,56 +1,49 @@
-#include CONTACT_HPP
+#include "Contact.hpp"
 
-// Basic constructor
-Contact::Contact()
-{
-  _firstName = "";
-  _lastName = "";
-  time(&_creationDate);
-}
-// Basic destructor
-Contact::~Contact()
-{
-
+// Constructor por defecto
+Contact::Contact() {
+    _firstName = "";
+    _lastName = "";
+    _nickname = "";
+    _phoneNumber = "";
+    _darkestSecret = "";
+    time(&_creationDate);
 }
 
-// Constructor with parameters
-Contact::Contact(std::string firstName, std::string lastName, std::string nickname, std::string phoneNumber, std::string darkestSecret)
-{
-  _firstName = firstName;
-  _lastName = lastName;
-  _nickname = nickname;
-  _phoneNumber = phoneNumber;
-  _darkestSecret = darkestSecret;
-  time(&_creationDate);
+// Destructor
+Contact::~Contact() {}
+
+// Constructor con parámetros
+Contact::Contact(std::string firstName, std::string lastName, std::string nickname, std::string phoneNumber, std::string darkestSecret) {
+    _firstName = firstName;
+    _lastName = lastName;
+    _nickname = nickname;
+    _phoneNumber = phoneNumber;
+    _darkestSecret = darkestSecret;
+    time(&_creationDate);
 }
 
-// Getters for the Contact class
-std::string getFirstName() const
-{
-  return _firstName;
+// Métodos getter
+std::string Contact::getFirstName() const {
+    return _firstName;
 }
 
-std::string getLastName() const
-{
-  return _lastName;
+std::string Contact::getLastName() const {
+    return _lastName;
 }
 
-str::string getNickName() const 
-{
-  return _nickname;
+std::string Contact::getNickname() const {
+    return _nickname;
 }
 
-std::string getPhoneNumber() const 
-{
-  return _phoneNumber;
+std::string Contact::getPhoneNumber() const {
+    return _phoneNumber;
 }
 
-std::string getDarkestSecret() const 
-{
-  return _darkestSecret;
+std::string Contact::getDarkestSecret() const {
+    return _darkestSecret;
 }
 
-std:time_t getCreationDate() const 
-{
-  return _creationDate;
+std::time_t Contact::getCreationDate() const {
+    return _creationDate;
 }

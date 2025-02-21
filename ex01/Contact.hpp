@@ -1,7 +1,9 @@
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
+
 #include <string>
-#include <ctime> // Allow us to use timers, to swithc old contacts to new ones
+#include <iostream>
+#include <ctime> // Para usar `time_t`
 
 class Contact
 { 
@@ -14,19 +16,18 @@ class Contact
     std::time_t _creationDate;
 
   public:
-  
-    // Constructors
+    // Constructores
     Contact();
     ~Contact();
     Contact(std::string firstName, std::string lastName, std::string nickname, std::string phoneNumber, std::string darkestSecret);
 
-    // Contact functions
+    // Métodos de acceso (getters)
     std::string getFirstName() const;
     std::string getLastName() const;
     std::string getNickname() const;
     std::string getPhoneNumber() const;
     std::string getDarkestSecret() const;
     std::time_t getCreationDate() const;
-}
+};
 
 #endif
