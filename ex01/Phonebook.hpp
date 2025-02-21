@@ -21,6 +21,7 @@ class Phonebook
     int getNumContacts() const;
     void addContact(std::string firstName, std::string lastName, std::string nickname, std::string phoneNumber, std::string darkestSecret);
     void displayContacts() const;
+    void displayContact(int index) const;
 };
 
 int searchOldestContact(Contact contacts[MAX_CONTACTS], int contactsCount);
