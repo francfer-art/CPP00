@@ -66,13 +66,11 @@ void Phonebook::addContact(std::string firstName, std::string lastName, std::str
     {
       _contacts[_contactsCount] = Contact(firstName, lastName, nickname, phoneNumber, darkestSecret);
         _contactsCount++;
-        std::cout << "Contact added successfully" << std::endl;
     } 
     else 
     {
         int oldestIndex = searchOldestContact(_contacts, _contactsCount);
         _contacts[oldestIndex] = Contact(firstName, lastName, nickname, phoneNumber, darkestSecret);
-        std::cout << "Contact added successfully" << std::endl;
     }
 }
 
