@@ -33,15 +33,12 @@ void Phonebook::displayContact(int index) const
         std::cout << "\033[1;31m" <<"Invalid index" << "\033[0m" << std::endl;
         return;
     }
-    std::cout << std::setw(10) << "Index" << "|";
-    std::cout << std::setw(10) << "First Name" << "|";
-    std::cout << std::setw(10) << "Last Name" << "|";
-    std::cout << std::setw(10) << "Nickname" << std::endl;
-
-    std::cout << "\033[1;32m" << std::setw(10) << index << "|";
-    std::cout << "\033[1;32m" << std::setw(10) << formatField(_contacts[index].getFirstName()) << "\033[0m|";
-    std::cout << "\033[1;32m" << std::setw(10) << formatField(_contacts[index].getLastName()) << "\033[0m|";
-    std::cout << "\033[1;32m" << std::setw(10) << formatField(_contacts[index].getNickname()) << "\033[0m" << std::endl;
+    std::cout << "\033[1;32m" << index << std::endl;
+    std::cout << "\033[1;32mName: \033[0m" << _contacts[index].getFirstName() << std::endl;
+    std::cout << "\033[1;32mLastname: \033[0m" << _contacts[index].getLastName() << std::endl;
+    std::cout << "\033[1;32mNickname: \033[0m" << _contacts[index].getNickname() << std::endl;
+    std::cout << "\033[1;32mPhone Number: \033[0m" << _contacts[index].getPhoneNumber() << std::endl;
+    std::cout << "\033[1;32mDarkest Secret: \033[0m" << _contacts[index].getDarkestSecret() << std::endl;
     
 }
 

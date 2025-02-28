@@ -92,6 +92,7 @@ int main() {
             std::cout << "\033[1;32mContact saved successfully!\033[0m" << std::endl;
         }
         else if (option == "SEARCH") {
+            phonebook.displayContacts();
             std::string index = getValidIndex();
             phonebook.displayContact(std::stoi(index));
         }
