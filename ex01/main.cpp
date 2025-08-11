@@ -4,6 +4,8 @@
 #include <iostream>
 #include <limits>
 #include <ctype.h>
+#include <cstdlib>
+#include <cstdio>
 
 std::string getValidIndex()
 {
@@ -34,9 +36,17 @@ std::string getValidIndex()
     }
 }
 
-bool isValidPhoneNumber(const std::string &phone) {
-    return !phone.empty() && std::all_of(phone.begin(), phone.end(), ::isdigit);
+bool isValidPhoneNumber(const std::string &phone)
+{
+    if (phone.empty())
+        return false;
+    for (std::string::const_iterator it = phone.begin(); it != phone.end(); ++it) {
+        if (!std::isdigit(*it))
+            return false;
+    }
+    return true;
 }
+
 
 std::string getInput(const std::string &prompt) {
     std::string input;
@@ -94,7 +104,7 @@ int main() {
         else if (option == "SEARCH") {
             phonebook.displayContacts();
             std::string index = getValidIndex();
-            phonebook.displayContact(std::stoi(index));
+            phonebook.displayContact(std::atoi(index.c_str()));
         }
         else if (option == "DISPLAY") {
             phonebook.displayContacts();
